@@ -19,6 +19,7 @@
             vscode-langservers-extracted
             prettier-d-slim
             nodejs_22
+            bun
           ];
         };
       });
