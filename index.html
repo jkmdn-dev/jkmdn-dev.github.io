@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="refresh" content="3" /> -->
-    <title>jkmdn</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="3" />
+  <etitle>jkmdn</title>
     <style>
       body {
         font-family: "Cascadia Code", Consolas, "Courier New", monospace;
@@ -127,7 +128,6 @@
         justify-content: left;
         align-items: center;
       }
-      }
 
       .side-column p {
         color: #e0def4;
@@ -177,31 +177,50 @@
         margin-right: 15px;
       }
 
-      .main-column .main-section {
+
+      .main-column .main-sections {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+      }
+
+      .main-column .main-sections .main-section {
         color: #286983;
         display: grid;
         grid-template-columns: 1fr 6fr;
-        grid-template-rows: auto 1fr;
+        grid-template-rows: auto;
+        padding-bottom: 25px;
       }
 
-      .main-column .main-section .main-section-title {
+      .main-column .main-sections .main-section .left-line {
+        background: #d7827e;
+        grid-column: 1;
+        height: calc(100% - 35px);
+        width: 2px;
+        transform: translateX(21px);
+      }
+
+      .main-column .main-sections .main-section .main-section-title {
         grid-row: 1;
         grid-column: 1/7;
         display: grid;
         grid-template-columns: 1fr 6fr;
         grid-template-rows: 1fr 1fr;
       }
-      .main-column .main-section .main-section-title .marker-container {
+
+      .main-column .main-sections .main-section .main-section-title .marker-container {
         height: 40px;
         width: 40px;
         border-radius: 50%;
-        border: 3px solid #cecacd;
+        /* border: 3px solid #cecacd; */
+        border: 2px solid #d7827e;
+        transform: translate(0px, -10px);
         grid-row: 1/3;
         grid-column: 1;
       }
 
-      .main-column .main-section .main-section-title .marker-container .marker {
-        background: #9893a5;
+      .main-column .main-sections .main-section .main-section-title .marker-container .marker {
+        /* background: #9893a5; */
+        background: #d7827e;
         color: #fffaf3;
         height: 35px;
         width: 35px;
@@ -215,7 +234,7 @@
         align-items: center;
       }
 
-      .main-column .main-section .main-section-title h2 {
+      .main-column .main-sections .main-section .main-section-title h2 {
         color: #575279;
         margin-top: 0px;
         margin-bottom: 0px;
@@ -223,7 +242,7 @@
         grid-row: 1;
       }
 
-      .main-column .main-section .main-section-title .underline {
+      .main-column .main-sections .main-section .main-section-title .underline {
         background: #9893a5;
         height: 5px;
         margin-top: 0px;
@@ -232,26 +251,46 @@
         grid-row: 2;
       }
 
-      .main-column .main-section .main-section-content {
+      .main-column .main-sections .main-section .main-section-content {
         color: #575279;
-        grid-row-start: 2;
         grid-column: 2;
         display: grid;
         grid-template-rows: auto auto auto;
-      }
+        padding-bottom: 35px;
       }
 
-      .main-column .main-section .main-section-content .main-section-content-place {
+      .main-column .main-sections .main-section .main-section-content .main-section-content-place {
+        font-size: 10px;
         grid-row: 1/2;
-
+        padding-bottom: 3px;
       }
 
-      .main-column .main-section .main-section-content .main-section-content-title-and-period {
+      .main-column .main-sections .main-section .main-section-content .main-section-content-title-and-period {
         grid-row: 2/3;
+        padding-bottom: 15px;
+        display: grid;
+        grid-template-columns: 90% auto;
       }
 
-      .main-column .main-section .main-section-content .main-section-content-description {
+      .main-column .main-sections .main-section .main-section-content .main-section-content-title-and-period .title {
+        grid-column: 1;
+        text-decoration-line: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+        font-weight: 1000;
+      }
+
+      .main-column .main-sections .main-section .main-section-content .main-section-content-title-and-period .period {
+        font-size: 10px;
+        grid-column: 2;
+        display: flex;
+        justify-content: right;
+      }
+
+      .main-column .main-sections .main-section .main-section-content .main-section-content-description {
+        font-size: 10px;
         grid-row: 3/4;
+        margin-right: 25px;
       }
 
       .main-column p {
@@ -517,7 +556,7 @@
         display: flex;
       }
 
-      .linkedin-continer .linkedin-icon-bg .i{
+      .linkedin-continer .linkedin-icon-bg .i {
         height: 10px;
         width: 4px;
         background: #1f1d2e;
@@ -544,173 +583,173 @@
         width: 10px;
         border-radius: 80% 100% 0 0;
         background: #1f1d2e;
-        transform: translateX(3px); */
+        transform: translateX(3px);
+        */
       }
 
       .linkedin-continer .linkedin-icon-bg .n .tunnel {
         height: 8px;
         width: 4px;
-        border-radius: 100% 100% 0 0 ;
+        border-radius: 100% 100% 0 0;
         background: #eb6f92;
         transform: translate(5px, -7px);
       }
     </style>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <div class="l-maring"></div>
-      <div class="side-column">
-        <div class="logo-container">
-          <div class="logo-border">
-            <div class="logo">
-              <h1>JP</h1>
-            </div>
+<body>
+  <div class="container">
+    <div class="l-maring"></div>
+    <div class="side-column">
+      <div class="logo-container">
+        <div class="logo-border">
+          <div class="logo">
+            <h1>JP</h1>
           </div>
         </div>
-        <div class="section">
-          <div class="section-title">
-            <h2>PROFILE</h2>
-            <div class="underline"></div>
-          </div>
-          <p>
-            Joakim is a systems developer with over 10 years of experience in
-            the field. With a strong background in science and data analysis he
-            has developed a deep understanding of the complexities of modern
-            systems. The last 6 years he has applied his knowledge to develop
-            and maintain many systems, ranging from small internal tools to
-            large-scale enterprise systems.
-          </p>
+      </div>
+      <div class="section">
+        <div class="section-title">
+          <h2>PROFILE</h2>
+          <div class="underline"></div>
         </div>
-        <div class="section">
-          <div class="section-title">
-            <h2>SKILLS</h2>
-            <div class="underline"></div>
+        <p>
+          Joakim is a systems developer with over 10 years of experience in
+          the field. With a strong background in science and data analysis he
+          has developed a deep understanding of the complexities of modern
+          systems. The last 6 years he has applied his knowledge to develop
+          and maintain many systems, ranging from small internal tools to
+          large-scale enterprise systems.
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">
+          <h2>SKILLS</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="skill-bar">
+          <h3>Python</h3>
+          <div class="bar">
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
           </div>
-          <div class="skill-bar">
-            <h3>Python</h3>
-            <div class="bar">
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-            </div>
-            <h3>Linux/Bash</h3>
-            <div class="bar">
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-            </div>
-            <h3>C/C++</h3>
-            <div class="bar">
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-weak"></div>
-            </div>
-            <h3>Rust</h3>
-            <div class="bar">
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-weak"></div>
-            </div>
-            <h3>Zig</h3>
-            <div class="bar">
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-            </div>
-            <h3>JS/TS/HTML/CSS</h3>
-            <div class="bar">
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-            </div>
-            <h3>CI/CD</h3>
-            <div class="bar">
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-strong"></div>
-              <div class="bar-unit-weak"></div>
-            </div>
+          <h3>Linux/Bash</h3>
+          <div class="bar">
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+          </div>
+          <h3>C/C++</h3>
+          <div class="bar">
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-weak"></div>
+          </div>
+          <h3>Rust</h3>
+          <div class="bar">
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-weak"></div>
+          </div>
+          <h3>Zig</h3>
+          <div class="bar">
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+          </div>
+          <h3>JS/TS/HTML/CSS</h3>
+          <div class="bar">
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+          </div>
+          <h3>CI/CD</h3>
+          <div class="bar">
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-strong"></div>
+            <div class="bar-unit-weak"></div>
           </div>
         </div>
-        <div class="section">
-          <div class="section-title">
-            <h2>CONTACT</h2>
-            <div class="underline"></div>
+      </div>
+      <div class="section">
+        <div class="section-title">
+          <h2>CONTACT</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="contact-container">
+          <div class="contact">
+            <div class="icon">
+              <div class="gg-mail"></div>
+            </div>
+            <div class="content">
+              <a href="mailto:jkmdn@proton.me">jkmdn@proton.me</a>
+            </div>
           </div>
-          <div class="contact-container">
-            <div class="contact">
-              <div class="icon">
-                <div class="gg-mail"></div>
-              </div>
-              <div class="content">
-                <a href="mailto:jkmdn@proton.me">jkmdn@proton.me</a>
+          <div class="contact">
+            <div class="icon">
+              <div class="gg-website"></div>
+            </div>
+            <div class="content">
+              <a href="https://jkmdn.dev">jkmdn.dev</a>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="icon">
+              <div class="github">
+                <div class="tail">
+                  <div class="tip"></div>
+                </div>
+                <div class="head">
+                  <div class="ear ear-left"></div>
+                  <div class="ear ear-right"></div>
+                </div>
+                <div class="body">
+                  <div class="bottom"></div>
+                </div>
               </div>
             </div>
-            <div class="contact">
-              <div class="icon">
-                <div class="gg-website"></div>
-              </div>
-              <div class="content">
-                <a href="https://jkmdn.dev">jkmdn.dev</a>
-              </div>
+            <div class="content">
+              <a href="https://github.com/jkmdn-dev">github.com/jkmdn-dev</a>
             </div>
-            <div class="contact">
-              <div class="icon">
-                <div class="github">
-                  <div class="tail">
-                    <div class="tip"></div>
+          </div>
+          <div class="contact">
+            <div class="icon">
+              <div class="linkedin-continer">
+                <div class="linkedin-icon-bg">
+                  <div class="i">
+                    <div class="dot"></div>
                   </div>
-                  <div class="head">
-                    <div class="ear ear-left"></div>
-                    <div class="ear ear-right"></div>
-                  </div>
-                  <div class="body">
-                    <div class="bottom"></div>
+                  <div class="n">
+                    <div class="bridge"></div>
+                    <div class="tunnel"></div>
                   </div>
                 </div>
               </div>
-              <div class="content">
-                <a href="https://github.com/jkmdn-dev">github.com/jkmdn-dev</a>
-              </div>
             </div>
-            <div class="contact">
-              <div class="icon">
-                <div class="linkedin-continer">
-                  <div class="linkedin-icon-bg">
-                    <div class="i">
-                      <div class="dot"></div>
-                    </div>
-                    <div class="n">
-                      <div class="bridge"></div>
-                      <div class="tunnel"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content">
-                <a href="https://linkedin.com/in/joakim-paulsson"
-                  >in/joakim-paulsson</a
-                >
-              </div>
+            <div class="content">
+              <a href="https://linkedin.com/in/joakim-paulsson">in/joakim-paulsson</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="main-column">
-        <div class="tile">
-          <h1>JOAKIM PAULSSON</h1>
-          <div class="underline">
-            SYSTEMS DEVELOPER
-            <div class="filling-bar"></div>
-          </div>
+    </div>
+    <div class="main-column">
+      <div class="tile">
+        <h1>JOAKIM PAULSSON</h1>
+        <div class="underline">
+          SYSTEMS DEVELOPER
+          <div class="filling-bar"></div>
         </div>
+      </div>
+      <div class="main-sections">
         <div class="main-section">
           <div class="main-section-title">
             <div class="marker-container">
@@ -719,14 +758,90 @@
             <h2>EDUCATION</h2>
             <div class="underline"></div>
           </div>
+          <div class="left-line"></div>
           <div class="main-section-content">
-              <div class="main-section-content-place">UMEA UNIVERSITY</div>
-            <div class="main-section-content-title-and-period">B.Sc Physics</div>
-            <div class="main-section-content-description">Studied theroetical physics at UMEA University, 2010 - 2012</div>
+            <div class="main-section-content-place">UMEA UNIVERSITY, SWEDEN</div>
+            <div class="main-section-content-title-and-period">
+              <div class="title"> B.SC. PHYSICS</div>
+              <div class="period">2012</div>
+            </div>
+            <div class="main-section-content-description">General theoretical physics and math. Thesis subject in
+              general relativity and differential geometry.</div>
+          </div>
+          <div class="left-line"></div>
+          <div class="main-section-content">
+            <div class="main-section-content-place">UMEA UNIVERSITY, SWEDEN</div>
+            <div class="main-section-content-title-and-period">
+              <div class="title"> M.SC. PHYSICS</div>
+              <div class="period">2014</div>
+            </div>
+            <div class="main-section-content-description">
+              Specialized in theoretical physics and math. Thesis subject in quantum plasma physics.
+            </div>
+          </div>
+        </div>
+        <div class="main-section">
+          <div class="main-section-title">
+            <div class="marker-container">
+              <div class="marker">W</div>
+            </div>
+            <h2>WORK EXPERIENCE</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="left-line"></div>
+          <div class="main-section-content">
+            <div class="main-section-content-place">UNIVERSITY OF OSLO, NORWAY</div>
+            <div class="main-section-content-title-and-period">
+              <div class="title"> P.HD. SPACE- & PLASMA-PHYSICS</div>
+              <div class="period">2018</div>
+            </div>
+            <div class="main-section-content-description">
+              Conducted research with focus on data analysis and simulations of plasma/spacecraft interactions.
+              Developed methods and algorithms to extract data from spacecraft mounted sounding instruments in highly
+              dynamic environments.
+            </div>
+          </div>
+          <div class="left-line"></div>
+          <div class="main-section-content">
+            <div class="main-section-content-place">OMICRON NORD AB, SWEDEN</div>
+            <div class="main-section-content-title-and-period">
+              <div class="title"> SOFTWARE DEVELOPER, CONTRACTOR</div>
+              <div class="period">2019</div>
+            </div>
+            <div class="main-section-content-description">
+              Contractor with focus on data science. First contract, at Guideline Geo AB, shortly after starting the
+              position was as a data scientist for a company working with ground peneterating radar. The aim was to use
+              image recognition to automatically find objects under ground.
+            </div>
+          </div>
+          <div class="left-line"></div>
+          <div class="main-section-content">
+            <div class="main-section-content-place">GUIDELINE GEO AB, SWEDEN</div>
+            <div class="main-section-content-title-and-period">
+              <div class="title"> DATA SCIENTIST</div>
+              <div class="period">2019</div>
+            </div>
+            <div class="main-section-content-description">
+              Main responsibility was to develop and maintain a data science pipeline for the Guideline Geo project. The
+              aim was to use image recognition to automatically find objects under ground.
+              <br>
+              <br>
+
+              Other responsibilities included (but not exclusively):
+              <ul>
+                <li>Developing data analysis and visualization tools for internal developers and external customers.</li>
+                <li>Data serialization and deserialization tools.</li>
+                <li>Master thesis supervision.</li>
+              </ul>
+
+
+            </div>
           </div>
         </div>
       </div>
-      <div class="r-maring"></div>
     </div>
-  </body>
+    <div class="r-maring"></div>
+  </div>
+</body>
+
 </html>
