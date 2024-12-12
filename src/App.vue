@@ -3,7 +3,7 @@ import Content from './components/Content.vue';
 </script>
 
 <template>
-  <div class="flex flex-col justify-center bg-dark min-h-screen">
+  <div class="flex flex-col justify-center bg-dark min-h-screen min-w-fit">
     <Content/>
   </div>
 </template>
